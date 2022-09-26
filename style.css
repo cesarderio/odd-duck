@@ -1,4 +1,6 @@
 body {
+  border: 5px solid black;
+  border-radius: 20px;
   background-color: #0b5cac;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -10,8 +12,12 @@ h1 {
   -webkit-text-fill-color: transparent;
   font-family: 'Exo 2', sans-serif;
   font-size: 4em;
-  padding: 50px;
-  margin-bottom: 40px;
+  border: 3px solid #43a047;
+  border-radius: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  margin-left: 25vw;
+  margin-right: 25vw;
 }
 
 main {
@@ -24,13 +30,14 @@ main {
   width:auto;
   grid-column: 2/-1;
   grid-row: 1/3;
+  gap: .2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   align-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10rem;
+  padding-top: 5rem;
+
+  margin-right: 5px;
 }
 
 #results-container {
@@ -48,23 +55,26 @@ ul {
 }
 
 img {
-  height: 400px;
-  width: 400px;
+  height: 50%;
+  width:50%;
   border-style: solid;
   border-width: 4px;
   border-radius: 10px;
   background-color: hsl(306, 96%, 44%);
   border-image: linear-gradient(
-    hsl(310, 98%, 23%),
+    hsl(126, 91%, 50%),
     hsl(269, 85%, 66%),
-    hsl(314, 85%, 66%),
+    hsl(128, 89%, 39%),
     hsl(310, 86%, 58%),
     hsl(309, 65%, 46%),
-    hsl(304, 77%, 55%),
+    hsl(118, 77%, 55%),
     hsl(307, 94%, 34%),
-    hsl(306, 96%, 44%)
+    hsl(128, 98%, 51%)
   ) 1;
 
+}
+img:hover{
+  border: 10px solid green;
 }
 
 #show-results-btn {
@@ -76,7 +86,7 @@ img {
   border-radius: 10px;
   cursor: pointer;
   color: #fff;
-  background-color: #111;
+  background-color: rgb(15, 227, 43);
   position: absolute;
   z-index: 0;
   margin-top: .2rem;
@@ -147,4 +157,5 @@ footer {
   height: 100px;
   font-size: 1.5em;
   text-align: center;
+  color: white;
 }

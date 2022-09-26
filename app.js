@@ -100,7 +100,7 @@ function handleShowResults(){
   if(voteCount === 0){
     for(let i = 0; i < duckArray.length; i++){
       let liElem = document.createElement('li');
-      liElem.textContent = `${duckArray[i].name} was viewed: ${duckArray[i].views} and clicked: ${duckArray[i].clicks}`;
+      liElem.textContent = `${duckArray[i].name} had ${duckArray[i].clicks} votes, and was seen ${duckArray[i].views} times`;
       resultsContainer.appendChild(liElem);
     }
     resultsBtn.removeEventListener('click', handleShowResults);
