@@ -31,7 +31,7 @@ Goose();
 
 function Duck(name, fileExtension = 'jpg'){
   this.name = name;
-  this.fileExtension = name.split('.').pop();
+  /*this.fileExtension = name.split('.').pop();*/
   this.img = `img/${name}.${fileExtension}`;
   this.views = 0;
   this.clicks = 0;
@@ -56,13 +56,7 @@ while(this.name !== 'sweep'){
 duckArray.push(this);
 
 
-
-
-
-
-
-
-// ****** HELPER FUNTCION / UTILITIES ******
+// ****** HELPER FUNCTION / UTILITIES ******
 function randomIndex(){
   return Math.floor(Math.random() * duckArray.length);
 }
@@ -158,7 +152,7 @@ new Duck('pen');
 new Duck('pet-sweep');
 new Duck('scissors');
 new Duck('shark');
-new Duck('sweep');
+new Duck('sweep','png');
 new Duck('tauntaun');
 new Duck('unicorn');
 new Duck('water-can');
