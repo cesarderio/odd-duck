@@ -2,11 +2,13 @@
 
 console.log('hey there hey!');
 
-// ******* GLOBAL VARIABLES *******
+//--------Global Variables --------------------------------------//
+
 let voteCount = 25;
 let duckArray = [];
 
-// ******* DOM REFERENCES *********
+//-------- DOM References ---------------------------------------//
+
 let imgContainer = document.getElementById('img-container');
 let imgOne = document.getElementById('img-one');
 let imgTwo = document.getElementById('img-two');
@@ -27,7 +29,7 @@ function Goose(){
 Goose();
 */
 
-// ******* CONSTRUCTOR FUNCTION ********
+//-------- Constructor Function --------------------------------//
 
 function Duck(name, fileExtension = 'jpg'){
   this.name = name;
@@ -35,41 +37,28 @@ function Duck(name, fileExtension = 'jpg'){
   this.img = `img/${name}.${fileExtension}`;
   this.views = 0;
   this.clicks = 0;
-
+  /*
   if(this.name === 'sweep'){
     fileExtension = 'png';
   }
+  */
 
 
- 
   duckArray.push(this);
 }
-/*
-while(this.name === 'sweep'){
-  let fileExtension = 'png';
-}
-while(this.name !== 'sweep'){
-  let fileExtension = 'jpg';
-}
-*/
 
 duckArray.push(this);
 
-
-// ****** HELPER FUNCTION / UTILITIES ******
+//-------- Helper Function / Utilities -------------------------//
 function randomIndex(){
   return Math.floor(Math.random() * duckArray.length);
 }
-
 
 function renderImgs(){
   let imgOneIndex = randomIndex();
   let imgTwoIndex = randomIndex();
   let imgThreeIndex = randomIndex();
 
-  // this will run and make sure they are unique
-  // ? multiple conditions to check for with 3 images
-  // ? OR use a container to store your 3 indexes and do your validation on that
   while(imgOneIndex === imgTwoIndex){
     imgTwoIndex = randomIndex();
   }
@@ -79,10 +68,7 @@ function renderImgs(){
   while(imgTwoIndex === imgThreeIndex){
     imgThreeIndex = randomIndex();
   }
-  /*while(imgTwoIndex === imgOneIndex || imgThreeIndex){
-    imgOneIndex = randomIndex();
-  }
-*/
+
   imgOne.src = duckArray[imgOneIndex].img;
   imgTwo.src = duckArray[imgTwoIndex].img;
   imgThree.src = duckArray[imgThreeIndex].img;
@@ -96,13 +82,14 @@ function renderImgs(){
   imgThree.alt = duckArray[imgThreeIndex].name;
 }
 
-// ***** EVENT HANDLERS **********
+//-------------------- Event Handlers --------------------------//
 
 function handleClick(event){
   console.dir(event.target);
   let imgClicked = event.target.alt;
 
-  // TODO: Add clicks to the image that was clicked
+  //---------- Keep vote count for images clicked --------------//
+
   console.log('img clicked >>', imgClicked);
 
   for(let i = 0; i < duckArray.length; i++){
@@ -112,20 +99,20 @@ function handleClick(event){
     }
   }
 
-  // TODO: decrement the vote count
+  //--------------decrement vote count ------------------------//
   voteCount--;
 
-  // TODO: call the render img to reload new images
+  //-------------- Render and Reload new images ---------------//
   renderImgs();
 
-  // TODO: after voting rounds have ended... end the clicks!
+  //-------------- End clicks after 25 voting Rounds ----------//
   if(voteCount === 0){
     imgContainer.removeEventListener('click', handleClick);
   }
 }
 
+//------------------ Display Results -------------------------//
 function handleShowResults(){
-  // TODO: Display results - once there are no more votes left
   if(voteCount === 0){
     for(let i = 0; i < duckArray.length; i++){
       let liElem = document.createElement('li');
@@ -136,7 +123,7 @@ function handleShowResults(){
   }
 }
 
-// ****** EXECUTABLE CODE ********
+//------------- EXECUTABLE CODE ----------------------------//
 
 new Duck('bag');
 new Duck('banana');
@@ -157,7 +144,6 @@ new Duck('tauntaun');
 new Duck('unicorn');
 new Duck('water-can');
 new Duck('wine-glass');
-
 
 renderImgs();
 
