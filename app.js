@@ -3,7 +3,7 @@
 console.log('hey there hey!');
 
 // ******* GLOBAL VARIABLES *******
-let voteCount = 5;
+let voteCount = 25;
 let duckArray = [];
 
 // ******* DOM REFERENCES *********
