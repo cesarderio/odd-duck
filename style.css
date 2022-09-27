@@ -26,22 +26,27 @@ h1 {
 }
 
 main {
+padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: minmax(100px, auto);
 }
 
 #img-container {
-  width:auto;
+ width: 65vw;
   grid-column: 2/-1;
   grid-row: 1/3;
-  gap: .2rem;
+  gap: 4px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   align-content: center;
   padding-top: 5rem;
-  margin-right: 3rem;
+  margin-right: 2rem;
+  padding-right: 1rem;
+  border-right: 1rem;
 }
 
 #results-container {
@@ -61,28 +66,30 @@ ul {
 img {
   height: 50%;
   width:50%;
-  margin-right: 5px;
+  
   border-style: solid;
   border-width: 4px;
   border-radius: 10px;
-  background-color: hsl(306, 96%, 44%);
+  background-color: hsl(112, 97%, 50%);
   border-image: linear-gradient(
 
     hsl(126, 91%, 50%),
-    hsl(269, 85%, 66%),
+    hsl(144, 76%, 50%),
     hsl(128, 89%, 39%),
-    hsl(310, 86%, 58%),
-    hsl(309, 65%, 46%),
+    hsl(123, 89%, 34%),
+    hsl(132, 51%, 35%),
     hsl(118, 77%, 55%),
-    hsl(307, 94%, 34%),
+    hsl(125, 40%, 41%),
     hsl(128, 98%, 51%)
 
   ) 1;
 
 }
-img :hover{
+img:hover{
+  margin-right: 10px;
+  margin-bottom: 20px;
 
-  border: 10px solid green;
+  border: 10px solid rgb(4, 246, 4);
 
 }
 
@@ -163,8 +170,9 @@ img :hover{
 }
 
 footer {
-  height: 100px;
+  height: 50px;
   font-size: 1.5em;
   text-align: center;
   color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
