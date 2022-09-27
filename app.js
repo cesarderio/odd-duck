@@ -14,23 +14,31 @@ let imgThree = document.getElementById('img-three');
 
 let resultsBtn = document.getElementById('show-results-btn');
 let resultsContainer = document.getElementById('results-container');
-
+/*
 function Goose(){
   for(let i = 0; i < duckArray.length; i++){
     if(duckArray[i].name === 'sweep'){
       fileExtension = 'png'
       duckArray.push(fileExtension);
+} else{
+  fileExtension = 'jpg'
+  duckArray.push(fileExtension);
 }
 Goose();
+*/
+
 // ******* CONSTRUCTOR FUNCTION ********
 
 function Duck(name, fileExtension = 'jpg'){
   this.name = name;
+  this.fileExtension = name.split('.').pop();
   this.img = `img/${name}.${fileExtension}`;
   this.views = 0;
   this.clicks = 0;
 
-  
+  if(this.name === 'sweep'){
+    fileExtension = 'png';
+  }
 
 
  
