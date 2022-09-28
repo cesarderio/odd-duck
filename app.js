@@ -53,7 +53,7 @@ function renderImgs(){
   let imgTwoIndex = randomIndex();
   let imgThreeIndex = randomIndex();
 */
-  /*
+ 
   while(imgOneIndex === imgTwoIndex){
     imgTwoIndex = randomIndex();
   }
@@ -62,7 +62,7 @@ function renderImgs(){
   }
   while(imgTwoIndex === imgThreeIndex){
     imgThreeIndex = randomIndex();
-  }*/
+  }
   console.log(imgOneIndex);
   console.log(imgTwoIndex);
   console.log(imgThreeIndex);
