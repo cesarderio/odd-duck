@@ -11,7 +11,6 @@ h1 {
   border-radius: 20px;
  
   text-align: center;
-  text-shadow: #000108;
   background: #43a047;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -23,42 +22,39 @@ h1 {
   margin-right: 25vw;
 }
 h2{
- 
-  padding-top: 1%;
+  border-top: 2%;
+  padding-top: 2.2%;
   text-align:center;
- padding-left: 25%;
-  margin-right: auto;
+
   background: #43a047;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Exo 2', sans-serif;
   font-size: 3.5em;
+  margin-bottom: 2%;
 }
 
-main {
-padding-right: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
+div {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(100px, 150px);
 }
 
 #img-container {
- width: 65vw;
-  grid-column: 2/-1;
+  width: 99%;
+  margin-left: 5px;
+  margin-right: 5px;
+  grid-column: 1/-1;
   grid-row: 1/3;
   gap: 4px;
-  display: flex;
+  display:flex;
   justify-content: space-around;
   align-items: center;
   align-content: center;
-  
-  margin-right: 5%;
-  padding-right: 2%;
-  border-right: 1rem;
 }
 
+/*
 #results-container {
   list-style-type:square;
   grid-row: 1/5;
@@ -80,11 +76,11 @@ ul {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 
 }
-
+*/
 img {
-  height: 50%;
+
+  height: 100%;
   width:50%;
-  
   border-style: solid;
   border-width: 4px;
   border-radius: 10px;
@@ -106,11 +102,9 @@ img {
 img:hover{
   margin-right: 10px;
   margin-bottom: 20px;
-
   border: 10px solid rgb(4, 246, 4);
-
 }
-
+/*
 #show-results-btn {
   width: max-content;
   font-family: 'Exo 2', sans-serif;
@@ -185,6 +179,39 @@ img:hover{
     background-position: 0 0;
   }
 }
+*/
+
+/*
+#my-chart1{
+  background-color: aqua;
+  border: 3px solid black;
+  border-radius: 20px;
+  
+  width: 95vw;
+  align-self: center;
+  margin-top: 5%;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 1.5%;
+}
+*/
+
+#bar-chart{
+  background-color: rgba(0, 255, 255, 0.711);
+  border: 3px solid black;
+  border-radius: 20px;
+  width: 95vw;
+  align-self: center;
+  margin-top: 5%;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 1.5%;
+}
+
 
 footer {
   padding-bottom: 1%;
