@@ -1,3 +1,42 @@
+'use strict'
+
+/*
+if(retrievedDucks){
+  for(let i = 0; i < parsedDucks.length; i++){
+    if(parsedDucks[i].name === 'sweep'){
+      let reconstructedSweep = new Duck(parsedDucks[i].name, 'png');
+      reconstructedSweep.votes = parsedDucks[i].votes;
+      reconstructedSweep.views = parsedDucks[i].views;
+    } else{
+      let reconstructedSweep = new Duck(parsedDucks[i].name);
+      reconstructedSweep.votes = parsedDucks[i].votes;
+      reconstructedSweep.views = parsedDucks[i].views;
+
+    }
+  }
+} else{
+  new Duck('bag');
+  new Duck('banana');
+  new Duck('bathroom');
+  new Duck('boots');
+  new Duck('breakfast');
+  new Duck('bubblegum');
+  new Duck('chair');
+  new Duck('cthulhu');
+  new Duck('dog-duck');
+  new Duck('dragon');
+  new Duck('pen');
+  new Duck('pet-sweep');
+  new Duck('scissors');
+  new Duck('shark');
+  new Duck('sweep','png');
+  new Duck('tauntaun');
+  new Duck('unicorn');
+  new Duck('water-can');
+  new Duck('wine-glass');
+}
+  */
+
 'use strict';
 console.log('Is this thing on?');
 
@@ -170,16 +209,13 @@ function handleShowResults(){
 
 //-----------------more local storage code
 //---------- Pull DATA out of Local Storage
-
 let retrievedDucks = localStorage.getItem('myDucks');
 console.log('retrievedDucks >>>', retrievedDucks);
 
 //---- Step 4 - Parse my data into code my app can use
-
 let parsedDucks = JSON.parse(retrievedDucks);
 
 console.log('parsed Ducks >>>', parsedDucks);
-
 //------------- EXECUTABLE CODE ----------------------------//
 
 if(retrievedDucks){

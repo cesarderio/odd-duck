@@ -197,9 +197,14 @@ img:hover{
   margin-bottom: 1.5%;
 }
 */
+#my-chart{
+  font-size: 10px;
+  color: black;
+}
 
 #bar-chart{
-  background-color: rgba(0, 255, 255, 0.711);
+  color: black;
+  background-color: rgb(158, 254, 254);
   border: 3px solid black;
   border-radius: 20px;
   width: 95vw;
