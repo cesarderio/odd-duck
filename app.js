@@ -189,7 +189,7 @@ function handleClick(event){
   if(voteCount === 0){
     imgContainer.removeEventListener('click', handleClick);
     renderChart();
-  /*renderChart2();*/
+
   }
 }
 
