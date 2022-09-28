@@ -16,15 +16,25 @@
     <h2>Choose your favorite below:</h2>
   </header>
   <main>
-    <section id="img-container">
-      <img id="img-one" src="" alt="">
-      <img id="img-two" src="" alt="">
-      <img id="img-three" src="" alt="">
+    <div id="imagesdiv">
+      <section id="img-container">
+        <img id="img-one" src="" alt="">
+        <img id="img-two" src="" alt="">
+        <img id="img-three" src="" alt="">
+      </section>
+    </div>
+    <section id="bar-chart">
+
+      <div id="show-results-btn"></div>
+        <ul id="results-container"></ul>
+        <h2>Voting Results:</h2>
+        <figure>
+          <canvas id="my-chart" ></canvas>
+        </figure>
     </section>
-      <div id="show-results-btn">View Results</div>
-      <ul id="results-container"></ul>
   </main>
   <footer>&copy; Raphael Chookagian 2022 </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
   <script src="./app.js"></script>
 </body>
 
