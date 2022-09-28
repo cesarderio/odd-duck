@@ -14,9 +14,6 @@ let imgThree = document.getElementById('img-three');
 
 let resultsBtn = document.getElementById('show-results-btn');
 /*let resultsContainer = document.getElementById('results-container');*/
-imgOne.addEventListener('click', handleClick);
-imgTwo.addEventListener('click', handleClick);
-imgThree.addEventListener('click', handleClick);
 
 //-------- Constructor Function ------------------------------
 
@@ -53,7 +50,7 @@ function renderImgs(){
   let imgTwoIndex = randomIndex();
   let imgThreeIndex = randomIndex();
 */
- 
+  /*
   while(imgOneIndex === imgTwoIndex){
     imgTwoIndex = randomIndex();
   }
@@ -63,11 +60,12 @@ function renderImgs(){
   while(imgTwoIndex === imgThreeIndex){
     imgThreeIndex = randomIndex();
   }
+  *//*
   console.log(imgOneIndex);
   console.log(imgTwoIndex);
   console.log(imgThreeIndex);
   console.log(noRepeat);
-
+*/
   imgOne.src = duckArray[imgOneIndex].img;
   imgTwo.src = duckArray[imgTwoIndex].img;
   imgThree.src = duckArray[imgThreeIndex].img;
@@ -141,7 +139,7 @@ function handleClick(event){
     }
   }
   voteCount--;
-
+  console.log(voteCount);
   renderImgs();
 
   if(voteCount === 0){
